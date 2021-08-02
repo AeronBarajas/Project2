@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+# Project Overview
+## Project Links
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- [Github](https://github.com/AeronBarajas/Project2)
+- [Deployed site](https://project2-dlmu9mtxs-aeronbarajas.vercel.app/)
 
-## Available Scripts
+## Project Description
 
-In the project directory, you can run:
+This project will be a recreation of the news/ blog-space IGN. I will be using my own API that I will use to create the articles that reflect the real thing on the real website.
 
-### `npm start`
+## API
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Here is a sample code snippet from my api.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```
+{
+              "nodeType": "paragraph",
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "The RX 6600 XT includes 8GB of GDDR6 memory with a memory speed of 16Gbps, 32 compute units, a 2359MHz game clock, and a 165 thermal design power, meaning you can use a 500W power supply if you decide to build a PC around the RX 6600 XT.",
+                  "marks": [],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+```
 
-### `npm test`
+## Wireframes
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [Project wireframes](https://res.cloudinary.com/dbeoydlvv/image/upload/v1627936886/IMG_AD25DB4B68D8-1_r9ni6z.jpg)
+- [Project architecture](https://res.cloudinary.com/dbeoydlvv/image/upload/v1627937383/IMG_F08DAF2E87F0-1_h09ed4.jpg)
 
-### `npm run build`
+### MVP/PostMVP - 
+#### MVP EXAMPLE
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Landing page for the site
+- Header with a nav link back to the homepage
+- Featured Article Cards
+- List of articles
+- Render data from the API to popluate the page with blog post
+- Allow user to click on a post to open on a new page
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### PostMVP EXAMPLE
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Add author section 
+- Add commment section
 
-### `npm run eject`
+## Components
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+##### Writing out your components and its descriptions isn't a required part of the proposal but can be helpful.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Based on the initial logic defined in the previous sections try and breakdown the logic further into stateless/stateful components.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+| Component |                          Description                          |
+| --------- | :-----------------------------------------------------------: |
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+Time frames are also vital in the development cycle. You have limited time to code all phases of the app. Your estimates can then be used to evaluate app possibilities based on the time needed and the actual time before the app must be submitted. It's always best to pad the time by a few hours to account for the unknown, adding an additional hour or two to each component to play it safe. Also, put a gif at the top of your Readme before you pitch, and you'll get a panda prize.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+| Component        | Priority | Estimated Time | Time Invetsted | Actual Time |
+| ---------------- | :------: | :------------: | :------------: | :---------: |
+| Design Structure |    H     |      4hrs      |     hrs        |   hrs       |
+| App              |    H     |      3hrs      |     hrs        |   hrs       |
+| Header           |    H     |      2hrs      |     hrs        |   hrs       |
+| Featured Cards   |    H     |      2hrs      |     hrs        |   hrs       |
+| Article List     |    H     |      3hrs      |     hrs        |   hrs       |
+| Individual Pages |    H     |      3hrs      |     hrs        |   hrs       |
+| API stuff        |    H     |      3hrs      |     hrs        |   hrs       |
+| Styling          |    H     |      3hrs      |     hrs        |   hrs       |
+| Debugging        |    H     |      3hrs      |     hrs        |   hrs       |
+| Total            |    H     |      26rs      |     hrs        |   hrs       |
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Additional Libraries
 
-### Code Splitting
+ -React
+ -Sass
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Code Snippet
 
-### Analyzing the Bundle Size
+Use this section to include a brief code snippet of functionality that you are proud of an a brief description. Code snippet should not be greater than 10 lines of code.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+function reverse(string) {
+	// here is the code to reverse a string of text
+}
+```
