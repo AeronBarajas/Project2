@@ -7,11 +7,16 @@ import ArticlePost from "./pages/ArticlePost";
 
 function App() {
 
-  const [articles, setArticles] = useState([]);
-  const [article, setArticle] = useState([]);
+  // const [articles, setArticles] = useState([]);
+  // const [article, setArticle] = useState([]);
 
-
-
+  const getAllArticles = async () => {
+    const response = await fetch(
+      "https://cdn.contentful.com/spaces/iz60vf35ehx3/environments/master/entries?access_token=jmNnYeQ0Lpi1GrZB672PyIcHv7mNkLq1qenFEXqXF6Y"
+    );
+    const data = await response.json();
+    console.log('API call test', data)
+    }
 
 
 
@@ -24,13 +29,12 @@ function App() {
         <Redirect to="/home" />
       </Route>
       <Route path="/home">
-        <Home articles={articles} openArticlePost={openArticlePost} />
+        <Home />
       </Route>
       <Route path="/article">
-        <ArticlePost article={article} />
+        <ArticlePost />
       </Route>
     </Switch>
-    <Footer />
   </div>
   );
 }

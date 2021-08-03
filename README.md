@@ -30,7 +30,7 @@ Here is a sample code snippet from my api.
 ## Wireframes
 
 - [Project wireframes](https://res.cloudinary.com/dbeoydlvv/image/upload/v1627936886/IMG_AD25DB4B68D8-1_r9ni6z.jpg)
-- [Project architecture](https://res.cloudinary.com/dbeoydlvv/image/upload/v1627937383/IMG_F08DAF2E87F0-1_h09ed4.jpg)
+- [Project architecture](https://res.cloudinary.com/dbeoydlvv/image/upload/v1628008331/IMG_0019_wrific.jpg)
 
 ### MVP/PostMVP - 
 #### MVP EXAMPLE
