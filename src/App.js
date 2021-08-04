@@ -1,23 +1,32 @@
 import "./App.css";
+import './styles.css'
 import { useState, useEffect } from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
 import Header from "./components/Header";
-import Home from "./pages/Home";
-import ArticlePost from "./pages/ArticlePost";
+import Home from "./components/Home";
+import ArticlePost from "./components/ArticlePost";
 
 function App() {
 
-  // const [articles, setArticles] = useState([]);
-  // const [article, setArticle] = useState([]);
+  const apiKey='https://cdn.contentful.com/spaces/iz60vf35ehx3/environments/master/entries?access_token=jmNnYeQ0Lpi1GrZB672PyIcHv7mNkLq1qenFEXqXF6Y'
+  const [articles, setArticles] = useState([])
+  const selectArticle = async() =>{
+    const response = await fetch(apiKey)
+    const data = await response.json()
+    const fixData = data.items.map( (blogPost, index) => {
+      return {
+        title: blogPost.fields.title,
+        content: blogPost.fields.content,
+        key: [index]
+     } })
+      console.log(fixData)
+      setArticles(fixData)
+      }
 
-  const getAllArticles = async () => {
-    const response = await fetch(
-      "https://cdn.contentful.com/spaces/iz60vf35ehx3/environments/master/entries?access_token=jmNnYeQ0Lpi1GrZB672PyIcHv7mNkLq1qenFEXqXF6Y"
-    );
-    const data = await response.json();
-    console.log('API call test', data)
-    }
-
+    useEffect (() => {
+      selectArticle()
+    }, [])
+  
 
 
 
@@ -29,12 +38,13 @@ function App() {
         <Redirect to="/home" />
       </Route>
       <Route path="/home">
-        <Home />
+        <Home articles= {articles}/>
       </Route>
       <Route path="/article">
         <ArticlePost />
       </Route>
     </Switch>
+    
   </div>
   );
 }
