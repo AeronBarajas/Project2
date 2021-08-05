@@ -7,7 +7,7 @@ function ArticlePost(props){
     return <div>
           <h3>{articles ? articles.title : null}</h3>
           <p>{articles ? articles.content : null}</p>
-          <a href={articles ? articles.link : null}>Original Article</a>
+          <a href={articles ? articles.link : null}>Click here for the actual article.</a>
         </div>
       
   
