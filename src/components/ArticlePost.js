@@ -5,11 +5,11 @@ function ArticlePost(props){
     const articles = props.blogPost.find((articles) => articles.title === title)
     
     return <div>
-          <h3>{articles.title}</h3>
-          <p>{articles.content}</p>
+          <h3>{articles ? articles.title : null }</h3>
+          {/* <p>{articles ? articles.content : null }</p> */}
         </div>
       
-
+  
   
 };
 
