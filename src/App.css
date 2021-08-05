@@ -1,3 +1,4 @@
+/* idk if I should touch this */
 .App {
   text-align: center;
 }
@@ -37,7 +38,7 @@
   }
 }
 
-
+/* My styling */
 
 body {
   background: rgb(71, 71, 71);
@@ -51,8 +52,7 @@ body {
   justify-content: space-between;
   width: 100vw;
   height: 50px;
-  background: rgb(71, 71, 71);
-  
+  background: rgb(105, 105, 105);
 }
 
 .ignlogo {
@@ -76,4 +76,25 @@ a {
 p {
   font-size: 150%;
   padding: 10%;
+}
+
+
+h1 {
+  padding: 10%;
+}
+
+h3 {
+  padding-top: 5%;
+}
+
+h4 {
+  padding: 5% 5% 0 5%;
+}
+
+h4:hover {
+  text-decoration: underline;
+}
+
+.ogarticle {
+  padding-bottom: 7%;
 }

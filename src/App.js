@@ -19,7 +19,7 @@ function App() {
       return {
         title: blogPost.fields.title,
         content: blogPost.fields.content,
-        link: blogPost.fields.link
+        link: blogPost.fields.link,
      } })
       setArticles(fixData)
   }
