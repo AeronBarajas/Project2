@@ -1,16 +1,15 @@
-import React from "react";
-
 function ArticlePost(props){
 
-    const key = props.match.params.key
+    const title = props.match.params.title
 
-    const blogPost = props.selectArticle.find((blogPost) => blogPost.key === key)
-    return (
-        <div>
-          <h3>{blogPost.title}</h3>
-          <h5>{blogPost.content}</h5>
+    const articles = props.blogPost.find((articles) => articles.title === title)
+    
+    return <div>
+          <h3>{articles.title}</h3>
+          <p>{articles.content}</p>
         </div>
-    )
+      
+
   
 };
 

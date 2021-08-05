@@ -1,9 +1,7 @@
 import React from "react";
 
-
-
-const Home = (props) => {
-    return <h1>Home Page</h1>
+const Home = () => {
+    return <h1>Welcome to IGN! Click on Articles to look at our most recent posts.</h1>
    
 };
 

@@ -5,6 +5,8 @@ import { Route, Switch, Redirect } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import ArticlePost from "./components/ArticlePost";
+import Featured from "./components/Featured";
+
 
 function App() {
 
@@ -17,11 +19,10 @@ function App() {
       return {
         title: blogPost.fields.title,
         content: blogPost.fields.content,
-        key: [index]
+        symbol: blogPost.fields.key
      } })
-      console.log(fixData)
       setArticles(fixData)
-      }
+  }
 
     useEffect (() => {
       selectArticle()
@@ -35,13 +36,13 @@ function App() {
     <Header />
     <Switch>
       <Route exact path="/">
-        <Redirect to="/home" />
+        <Home />
       </Route>
-      <Route path="/home">
-        <Home articles= {articles}/>
+      <Route path="/articles">
+        <Featured  blogPost= {articles} />
       </Route>
-      <Route path="/article">
-        <ArticlePost />
+      <Route path="/article/:title" render={(rp) => <ArticlePost blogPost={articles} {...rp} />}>
+        
       </Route>
     </Switch>
     
